@@ -1,0 +1,50 @@
+
+DO NOT DISTURB --- CRITICAL PROCESS RUNNING ...
+
+IF NEEDED:
+>>> chdir C:\Windows\System32
+
+
+Python cmd line -- SSI Server
+... arcgispro-py3>>> "C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\python.exe" G:/SSCI594/CommuteGeolocator/Scripts/proc_metrics.py
+
+
+
+cmd line -- DEV Server
+>>> "C:\Python27\ArcGISx6410.7\python.exe" D:/Projects/CGCLocator/Scripts/proc_metrics.py
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+EXTRACT POINTS AT ENDS OF POLYLINES
+
+    #     log_message = "Extracting First & Last X, Y from {}".format(bus_route_temp)
+    #     logger.info(log_message)
+    #
+    #     fc_list = [f.name for f in arcpy.ListFields(bus_route_temp)]
+    #     field_names = ["FROM_X", "FROM_Y", "TO_X", "TO_Y"]
+    #     for field_name in field_names:
+    #         if field_name not in fc_list:
+    #             arcpy.AddField_management(bus_route_temp, field_name, "DOUBLE")
+    #
+    #     field_names = ["SHAPE@"] + field_names
+    #
+    #     with arcpy.da.UpdateCursor(bus_route_temp, field_names) as cursor:
+    #         for row in cursor:
+    #             line_geom = row[0]
+    #
+    #             start = arcpy.PointGeometry(line_geom.firstPoint)
+    #             start_xy = start.WKT.strip("POINT (").strip(")").split(" ")
+    #             row[1] = start_xy[0]  # FROM_X
+    #             row[2] = start_xy[1]  # FROM_Y
+    #
+    #             end = arcpy.PointGeometry(line_geom.lastPoint)
+    #             end_xy = end.WKT.strip("POINT (").strip(")").split(" ")
+    #             row[3] = end_xy[0]  # TO_X
+    #             row[4] = end_xy[1]  # TO_Y
+    #
+    #             cursor.updateRow(row)
+    #
+    #         ## del row
+    #         del cursor
+    #
+
