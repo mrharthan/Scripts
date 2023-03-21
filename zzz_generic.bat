@@ -1,1 +1,0 @@
-"C:\Python27\ArcGIS10.5\python.exe" "C:/Projects/TxDOTCONNECT/scripts/connect_assets.py lrm los des gov trf sec"
